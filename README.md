@@ -1,6 +1,8 @@
 ansible-pre-ansible
 ===================
 
+[![Build Status](https://travis-ci.org/galexrt/ansible-pre-ansible.svg?branch=master)](https://travis-ci.org/galexrt/ansible-pre-ansible)
+
 Based on the pre-ansible role from kubernetes/contrib. This role is intended to be run before any other role.
 
 Requirements
