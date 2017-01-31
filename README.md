@@ -33,7 +33,7 @@ An example playbook on how to use this role:
 License
 -------
 
-Apache 2.0 License
+Apache 2.0
 
 Author Information
 ------------------
