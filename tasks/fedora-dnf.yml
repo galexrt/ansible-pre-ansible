@@ -2,7 +2,5 @@
 - name: Install minimal packages
   raw: dnf install -y {{ item }}
   with_items:
-    - python # everyone need python2
-    - python-dnf # some versions of ansible (2.0) use dnf directly
-    - yum # some versions of ansible use yum
-    - libselinux-python
+    - python2 # everyone need python2
+    - python2-dnf # some versions of ansible (2.0) use dnf directly
