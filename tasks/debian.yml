@@ -3,3 +3,5 @@
   raw: apt-get install -y {{ item }}
   with_items:
     - python
+  register: debian_minimal_install
+  changed_when: "'0 newly installed' not in debian_minimal_install.stdout"
