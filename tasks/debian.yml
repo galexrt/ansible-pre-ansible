@@ -1,0 +1,5 @@
+---
+- name: Install minimal packages
+  raw: apt-get install -y {{ item }}
+  with_items:
+    - python
