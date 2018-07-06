@@ -39,7 +39,7 @@
   when: s.rc == 0
 
 - include: fedora-dnf.yml
-  when: os_version.stdout|int >= 22 and 'Fedora' in distro.stdout and is_atomic is not defined
+  when: 'os_version.stdout|int >= 22 and "Fedora" in distro.stdout and is_atomic is not defined'
 
 - include: debian.yml
-  when: 'Debian' in distro.stdout or 'Ubuntu' in distro.stdout
+  when: '"Debian" in distro.stdout or "Ubuntu" in distro.stdout'
