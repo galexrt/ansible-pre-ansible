@@ -1,7 +1,5 @@
 ---
 - name: Install minimal packages
-  raw: apt-get install -y {{ item }}
-  with_items:
-    - python
+  raw: apt-get install -y python || apt-get install -y python3
   register: debian_minimal_install
   changed_when: "'0 newly installed' not in debian_minimal_install.stdout"
