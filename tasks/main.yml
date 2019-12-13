@@ -3,11 +3,13 @@
   raw: "grep '^VERSION_ID=' /etc/os-release | sed s'/VERSION_ID=//'"
   register: os_version
   check_mode: no
+  changed_when: false
 
 - name: Get distro name from /etc/os-release
   raw: "grep '^NAME=' /etc/os-release | sed s'/NAME=//'"
   register: distro
   check_mode: no
+  changed_when: false
 
 - name: Init the is_coreos fact
   set_fact:
