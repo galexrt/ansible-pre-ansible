@@ -1,6 +1,10 @@
 ---
 - name: Install minimal packages
-  raw: dnf install -y {{ item }}
+  raw: "{{ item }}"
   with_items:
-    - python2 # everyone need python2
-    - python2-dnf # some versions of ansible (2.0) use dnf directly
+    - dnf install -y python3
+    - dnf install -y python3-dnf
+
+- name: Set python3 as Ansible interpreter
+  set_fact:
+    ansible_python_interpreter: /usr/bin/python3
