@@ -2,8 +2,7 @@
 - name: Install minimal packages
   raw: "{{ item }}"
   with_items:
-    - dnf install -y python3
-    - dnf install -y python3-dnf
+    - dnf install -y python3 python3-dnf
 
 - name: Set python3 as Ansible interpreter
   set_fact:
