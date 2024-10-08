@@ -25,7 +25,7 @@
     bin_dir: "/opt/bin"
   when: is_coreos
 
-- include: coreos.yml
+- include_tasks: coreos.yml
   when: is_coreos
 
 - name: Determine if Atomic
@@ -40,8 +40,8 @@
     is_atomic: true
   when: s.rc == 0
 
-- include: fedora-dnf.yml
+- include_tasks: fedora-dnf.yml
   when: 'os_version.stdout|int >= 22 and "Fedora" in distro.stdout and is_atomic is not defined'
 
-- include: debian.yml
+- include_tasks: debian.yml
   when: '"Debian" in distro.stdout or "Ubuntu" in distro.stdout'
